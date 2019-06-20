@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.seddik.youssef.fixit.FixerSearchActivity"
+    android:orientation="vertical"
+    android:background="@color/colorPrimary"
+    android:padding="16dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp">
+        <ImageView
+            android:padding="4dp"
+            android:id="@+id/Fixer_photo"
+            android:layout_width="100dp"
+            android:layout_height="90dp"
+            android:src="@drawable/image_selector" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="90dp"
+            android:orientation="vertical"
+            android:layout_marginLeft="5dp"
+            android:gravity="center_vertical"
+            android:layout_toRightOf="@id/Fixer_photo">
+            <TextView
+                android:id="@+id/fixer_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="fixer name"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"/>
+
+            <TextView
+                android:id="@+id/fixer_prof"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="profession"
+                android:layout_marginLeft="6dp"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"/>
+
+            <TextView
+                android:id="@+id/fixer_phone_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="phone number"
+                android:layout_marginLeft="6dp"
+                android:textSize="16dp"
+                android:textColor="@android:color/white"/>
+        </LinearLayout>
+        <ImageButton
+            android:id="@+id/refresh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_refresh"
+            android:background="@color/colorPrimary"
+            android:onClick="refreshBtn"
+            android:layout_marginRight="10dp"
+            android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="8dp"
+      >
+        <TextView
+            android:id="@+id/quality"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Quality"
+            android:textSize="24dp"
+            android:textColor="@android:color/darker_gray"
+            android:layout_gravity="center_horizontal"/>
+
+        <RatingBar
+            android:id="@+id/ratingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:progressBackgroundTint="@android:color/darker_gray" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/comments"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Comments"
+        android:textSize="24dp"
+        android:textColor="@android:color/darker_gray"
+        android:layout_gravity="center_horizontal"
+        />
+
+    <ListView
+        android:id="@+id/comment_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="8dp"
+        ></ListView>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="-3dp">
+        <EditText
+            android:id="@+id/comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="8dp"
+            android:hint="Comment here..."
+            android:inputType="text"
+            android:backgroundTint="@android:color/darker_gray"
+            android:padding="10dp"
+            android:textColor="@android:color/white"
+            android:textColorHint="@android:color/darker_gray"
+            android:textSize="24sp"
+            android:layout_marginRight="10dp"/>
+        <ImageButton
+            android:id="@+id/send_comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="18dp"
+            android:onClick="send_review"
+            android:background="@drawable/ic_enter"
+            />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/order_now"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_selector"
+        android:layout_gravity="center_horizontal"
+        android:text="Order Now"
+        android:textAllCaps="false"
+        android:onClick="makeOrder"
+        android:layout_marginTop="8dp"
+        android:textAppearance="?android:textAppearanceLarge"
+        />
+</LinearLayout>

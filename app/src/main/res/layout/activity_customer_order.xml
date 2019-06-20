@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    >
+
+
+<RelativeLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="16dp"
+
+
+    >
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+
+        android:layout_marginTop="48dp"
+        android:background="@drawable/strocks_images"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <ImageButton
+            android:id="@+id/BTN_select_image"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight=".5"
+            android:background="@drawable/selector_camera"
+            android:onClick="select_photo"
+            android:src="@android:drawable/stat_sys_upload_done"
+            app:layout_constraintHorizontal_bias="0.078"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            tools:layout_editor_absoluteY="53dp"
+
+
+            />
+
+        <RelativeLayout
+            android:id="@+id/RL_image1"
+            android:layout_width="0dp"
+            android:layout_height="130dp"
+            android:layout_weight="1"
+            android:visibility="visible">
+
+            <ImageView
+                android:id="@+id/image1"
+                android:layout_width="150dp"
+                android:layout_height="200dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/strocks_images"
+                android:src="@android:drawable/ic_menu_gallery"
+                app:layout_constraintHorizontal_bias="0.65"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                tools:layout_editor_absoluteY="25dp" />
+
+            <Button
+                android:id="@+id/Del_image1"
+                android:layout_width="18dp"
+                android:layout_height="25dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:background="@android:drawable/ic_delete"
+                android:backgroundTint="#ffffff"
+                android:onClick="delet_image"
+
+
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/RL_image2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:visibility="visible">
+
+            <ImageView
+                android:id="@+id/image2"
+                android:layout_width="150dp"
+                android:layout_height="2000dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/strocks_images"
+                android:src="@android:drawable/ic_menu_gallery"
+                app:layout_constraintHorizontal_bias="0.65"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                tools:layout_editor_absoluteY="25dp" />
+
+            <Button
+                android:id="@+id/Del_image2"
+                android:layout_width="18dp"
+                android:layout_height="25dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:background="@android:drawable/ic_delete"
+                android:backgroundTint="#ffffff"
+                android:onClick="delet_image"
+
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/RL_image3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:visibility="visible">
+
+            <ImageView
+                android:id="@+id/image3"
+                android:layout_width="150dp"
+                android:layout_height="2000dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/strocks_images"
+                android:src="@android:drawable/ic_menu_gallery"
+                app:layout_constraintHorizontal_bias="0.65"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                tools:layout_editor_absoluteY="25dp" />
+
+            <Button
+                android:id="@+id/Del_image3"
+                android:layout_width="18dp"
+                android:layout_height="25dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:background="@android:drawable/ic_delete"
+                android:backgroundTint="#ffffff"
+                android:onClick="delet_image"
+
+                />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="103dp"
+        android:background="@drawable/strocks_images"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:text="Description:"
+            android:textColor="#ffffff"
+            android:textSize="22sp"
+
+            />
+
+        <EditText
+
+            android:id="@+id/TX_description"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/descriotion_selector"
+            android:cursorVisible="true"
+            android:inputType="textMultiLine"
+            android:padding="10dp"
+            android:singleLine="false"
+            android:textDirection="ltr" />
+
+        <Button
+            android:id="@+id/btnOrder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:background="#009a9a"
+            android:onClick="order"
+            android:text="Order Now"
+            android:textAllCaps="false"
+            android:textColor="#ffffff"
+            android:textSize="22sp"
+
+            />
+
+
+    </LinearLayout>
+
+</RelativeLayout>
+</android.support.constraint.ConstraintLayout>
+
